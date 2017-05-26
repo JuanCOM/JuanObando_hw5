@@ -36,39 +36,45 @@ radio_max1=lc1[max_likelihood_id1]
 fig = plt.figure(figsize=(5.5,15))
 
 ang = np.linspace(0, 2*np.pi, 100)
-c_x = (radio_max-0.5)*np.cos(ang) +best_x
-c_y = (radio_max-0.5)*np.sin(ang) +best_y
+c_x = (radio_max-1.0)*np.cos(ang) +best_x
+c_y = (radio_max-1.0)*np.sin(ang) +best_y
 ax1 = fig.add_subplot(421)
-ax1.set_title("Parametros:,$x=%f$,$y=%f$,$r=%f$"%(best_x, best_y,radio_max))
+ax1.set_title("$x=%f$,$y=%f$,$r=%f$"%(best_x, best_y,radio_max))
 ax1.scatter(x0,y0,s = 8, color ="black")
 ax1.scatter(best_x,best_y, color="red", s =8)
 ax1.plot(c_x, c_y, 'r-')
 
 ax2 = fig.add_subplot(422)
+ax2.set_title("Caminata_0")
 ax2.scatter(xc, yc, s=0.1, color="black")
 
 ax3 = fig.add_subplot(423)
+ax3.set_title("histog_x")
 count, bins, ignored =ax3.hist(xc, 20, normed=True)
 
 ax4 = fig.add_subplot(424)
+ax4.set_title("histog_y")
 count, bins, ignored =ax4.hist(yc, 20, normed=True)
 
 ang1 = np.linspace(0, 2*np.pi, 100)
-c_x1 = (radio_max1-0.5)*np.cos(ang1) +best_x1
-c_y1 = (radio_max1-0.5)*np.sin(ang1) +best_y1
+c_x1 = (radio_max1-1.0)*np.cos(ang1) +best_x1
+c_y1 = (radio_max1-1.0)*np.sin(ang1) +best_y1
 ax5 = fig.add_subplot(425)
-ax5.set_title("Parametros:,$x=%f$,$y=%f$,$r=%f$"%(best_x1, best_y1,radio_max1))
+ax5.set_title("$x=%f$,$y=%f$,$r=%f$"%(best_x1, best_y1,radio_max1))
 ax5.scatter(x1,y1,s = 8, color ="black")
 ax5.scatter(best_x1,best_y1, color="red", s =8)
 ax5.plot(c_x1, c_y1, 'r-')
 
 ax6 = fig.add_subplot(426)
+ax6.set_title("Caminata_1")
 ax6.scatter(xc1, yc1, s=0.1, color="black")
 
 ax7 = fig.add_subplot(427)
+ax7.set_title("histog_x")
 Count, bins, ignored =ax7.hist(xc1, 20, normed=True)
 
 ax8 = fig.add_subplot(428)
+ax8.set_title("histog_y")
 count, bins, ignored =ax8.hist(yc1, 20, normed=True)
 
 
