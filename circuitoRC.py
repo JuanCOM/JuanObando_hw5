@@ -27,8 +27,8 @@ def likelihood(obs, model):
 
 
 
-R_walk = [2]
-C_walk = [2]
+R_walk = [7]
+C_walk = [7]
 l_walk = [likelihood(q_obs, my_model(R_walk[0], C_walk[0], t))]
 
 
@@ -93,7 +93,7 @@ ax4.set_xlabel("$C$")
 plt.tight_layout()
 fig = plt.gcf()
 
-plt.show()
+fig.savefig("RCfig.pdf")
 
 
 
