@@ -59,16 +59,6 @@ print (Q_max)
 
 
 
-
-#fig, ax = plt.subplots(figsize = (5,5))
-#ax.plot(crc[:,0], crc[:,1], label = r"Datos observados")
-#ax.plot(crc[:,0], my_model(best_R, best_C, crc[:,0]),label = "Datos para $R = %f$ y $C = %f$" % #(best_R, best_C))#
-#ax.set_xlabel(r"$t$")
-#ax.set_ylabel(r"$q$")
-#ax.set_title("Fit Circuito $RC$")
-#ax.legend()
-#plt.show()
-
 fig = plt.figure(figsize=(8,10))
 
 
@@ -81,31 +71,12 @@ ax1.set_ylabel("$q$")
 ax1.legend()
 
 
-#fig, ax = plt.subplots(1, 2, figsize = (5,5), sharey = True)
-#ax[0].scatter(R_walk, -np.log(l_walk), alpha = 0.1)
-#ax[1].scatter(C_walk, -np.log(l_walk), alpha = 0.1)
-#ax[0].set_xlabel("$R$")
-#ax[1].set_xlabel("$C$")
-#ax[0].set_ylabel("$-\ln(L)$")
-#plt.tight_layout()
-#plt.show()
 
 ax2 = fig.add_subplot(222)
 ax2.scatter(R_walk, -np.log(l_walk), alpha = 0.1, label = "R_walk", color="red")
 ax2.scatter(C_walk, -np.log(l_walk), alpha = 0.1, label = "C_walk", color ="green")
 ax2.set_xlabel("$R y C$")
 ax2.legend()
-
-
-
-#fig, ax = plt.subplots(1, 2, figsize = (5,5), sharey = True)
-#ax[0].hist(R_walk, 20, normed = True)
-#ax[1].hist(C_walk, 20, normed = True)
-#ax[0].set_xlabel(r"$R$")
-#ax[1].set_xlabel(r"$C$")
-#ax[0].set_ylabel(r"Frecuencia normalizada")
-#plt.tight_layout()
-#plt.show()
 
 
 ax3 = fig.add_subplot(223)
