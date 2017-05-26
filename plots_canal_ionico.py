@@ -80,5 +80,4 @@ count, bins, ignored =ax8.hist(yc1, 20, normed=True)
 
 plt.tight_layout()
 fig = plt.gcf()
-
-plt.show()
+fig.savefig("canalplots.pdf")
